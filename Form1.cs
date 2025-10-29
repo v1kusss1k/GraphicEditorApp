@@ -68,7 +68,8 @@ namespace GraphicEditor
             map = new Bitmap(rectangle.Width, rectangle.Height);
             graphics = Graphics.FromImage(map);
 
-
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -95,6 +96,43 @@ namespace GraphicEditor
             }
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pen.Color = ((Button)sender).BackColor;
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK) 
+            {
+                pen.Color = colorDialog1.Color;
+                ((Button)sender).BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            graphics.Clear(pictureBox1.BackColor);
+            pictureBox1.Image = map;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter =  "JPG(*.JPG)|*.jpg";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) 
+            {
+                if (pictureBox1.Image != null)
+                { 
+                    pictureBox1.Image.Save(saveFileDialog1.FileName);
+                }
+            }
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e)
+        {
+            pen.Width = trackBar1.Value;
         }
     }
 }
