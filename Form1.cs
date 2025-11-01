@@ -222,7 +222,7 @@ namespace GraphicEditor
                         MessageBox.Show("Ошибка при открытии изображения:" + ex.Message);
                     }
                 }
-            }
+            } 
         }
     }
 }
