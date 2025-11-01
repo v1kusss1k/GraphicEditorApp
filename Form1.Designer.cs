@@ -45,11 +45,18 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonFont = new System.Windows.Forms.Button();
+            this.buttonUndo = new System.Windows.Forms.Button();
+            this.button = new System.Windows.Forms.Button();
+            this.buttonImage = new System.Windows.Forms.Button();
+            this.buttonText = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -254,6 +261,15 @@
             this.panel2.Size = new System.Drawing.Size(192, 100);
             this.panel2.TabIndex = 5;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(3, 41);
+            this.trackBar1.Maximum = 20;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(192, 56);
+            this.trackBar1.TabIndex = 0;
+            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
+            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -265,17 +281,13 @@
             this.label1.Text = "Выбор толщины";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(3, 41);
-            this.trackBar1.Maximum = 20;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(192, 56);
-            this.trackBar1.TabIndex = 0;
-            this.trackBar1.ValueChanged += new System.EventHandler(this.trackBar1_ValueChanged);
-            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonFont);
+            this.panel1.Controls.Add(this.buttonUndo);
+            this.panel1.Controls.Add(this.button);
+            this.panel1.Controls.Add(this.buttonImage);
+            this.panel1.Controls.Add(this.buttonText);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
@@ -285,6 +297,70 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(192, 587);
             this.panel1.TabIndex = 6;
+            // 
+            // buttonFont
+            // 
+            this.buttonFont.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonFont.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFont.Location = new System.Drawing.Point(0, 317);
+            this.buttonFont.Name = "buttonFont";
+            this.buttonFont.Size = new System.Drawing.Size(192, 38);
+            this.buttonFont.TabIndex = 11;
+            this.buttonFont.Text = "Шрифт";
+            this.buttonFont.UseVisualStyleBackColor = true;
+            this.buttonFont.Click += new System.EventHandler(this.buttonFont_Click);
+            // 
+            // buttonUndo
+            // 
+            this.buttonUndo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonUndo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUndo.Location = new System.Drawing.Point(0, 437);
+            this.buttonUndo.Name = "buttonUndo";
+            this.buttonUndo.Size = new System.Drawing.Size(192, 37);
+            this.buttonUndo.TabIndex = 10;
+            this.buttonUndo.Text = "Повторить";
+            this.buttonUndo.UseVisualStyleBackColor = true;
+            this.buttonUndo.Click += new System.EventHandler(this.buttonRedo_Click);
+            // 
+            // button
+            // 
+            this.button.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button.Location = new System.Drawing.Point(0, 474);
+            this.button.Name = "button";
+            this.button.Size = new System.Drawing.Size(192, 38);
+            this.button.TabIndex = 9;
+            this.button.Text = "Отменить";
+            this.button.UseVisualStyleBackColor = true;
+            this.button.Click += new System.EventHandler(this.buttonUndo_Click);
+            // 
+            // buttonImage
+            // 
+            this.buttonImage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonImage.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonImage.Location = new System.Drawing.Point(0, 279);
+            this.buttonImage.Name = "buttonImage";
+            this.buttonImage.Size = new System.Drawing.Size(192, 38);
+            this.buttonImage.TabIndex = 8;
+            this.buttonImage.Text = "Изображение";
+            this.buttonImage.UseVisualStyleBackColor = true;
+            this.buttonImage.Click += new System.EventHandler(this.buttonImage_Click);
+            // 
+            // buttonText
+            // 
+            this.buttonText.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonText.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonText.Location = new System.Drawing.Point(0, 241);
+            this.buttonText.Name = "buttonText";
+            this.buttonText.Size = new System.Drawing.Size(192, 38);
+            this.buttonText.TabIndex = 7;
+            this.buttonText.Text = "Текст";
+            this.buttonText.UseVisualStyleBackColor = true;
+            this.buttonText.Click += new System.EventHandler(this.buttonText_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
@@ -329,6 +405,13 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button buttonImage;
+        private System.Windows.Forms.Button buttonText;
+        private System.Windows.Forms.Button buttonUndo;
+        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button buttonFont;
+        private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
 
