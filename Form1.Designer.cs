@@ -50,7 +50,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonFont = new System.Windows.Forms.Button();
             this.buttonUndo = new System.Windows.Forms.Button();
             this.button = new System.Windows.Forms.Button();
             this.buttonImage = new System.Windows.Forms.Button();
@@ -129,7 +128,7 @@
             this.button3.Size = new System.Drawing.Size(35, 35);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button4
             // 
@@ -140,7 +139,7 @@
             this.button4.Size = new System.Drawing.Size(35, 35);
             this.button4.TabIndex = 5;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button3_Click);
+            this.button4.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button5
             // 
@@ -151,7 +150,7 @@
             this.button5.Size = new System.Drawing.Size(35, 35);
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button3_Click);
+            this.button5.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button6
             // 
@@ -162,7 +161,7 @@
             this.button6.Size = new System.Drawing.Size(35, 35);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button3_Click);
+            this.button6.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button7
             // 
@@ -173,7 +172,7 @@
             this.button7.Size = new System.Drawing.Size(35, 35);
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button3_Click);
+            this.button7.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button8
             // 
@@ -184,7 +183,7 @@
             this.button8.Size = new System.Drawing.Size(35, 35);
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button3_Click);
+            this.button8.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button9
             // 
@@ -195,7 +194,7 @@
             this.button9.Size = new System.Drawing.Size(35, 35);
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button3_Click);
+            this.button9.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button10
             // 
@@ -206,7 +205,7 @@
             this.button10.Size = new System.Drawing.Size(35, 35);
             this.button10.TabIndex = 11;
             this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button3_Click);
+            this.button10.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button11
             // 
@@ -217,7 +216,7 @@
             this.button11.Size = new System.Drawing.Size(35, 35);
             this.button11.TabIndex = 12;
             this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button3_Click);
+            this.button11.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button12
             // 
@@ -228,7 +227,7 @@
             this.button12.Size = new System.Drawing.Size(35, 35);
             this.button12.TabIndex = 13;
             this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button3_Click);
+            this.button12.Click += new System.EventHandler(this.colorButton_Click);
             // 
             // button13
             // 
@@ -239,7 +238,6 @@
             this.button13.Size = new System.Drawing.Size(35, 35);
             this.button13.TabIndex = 14;
             this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button3_Click);
             // 
             // button14
             // 
@@ -283,7 +281,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonFont);
             this.panel1.Controls.Add(this.buttonUndo);
             this.panel1.Controls.Add(this.button);
             this.panel1.Controls.Add(this.buttonImage);
@@ -297,18 +294,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(192, 587);
             this.panel1.TabIndex = 6;
-            // 
-            // buttonFont
-            // 
-            this.buttonFont.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonFont.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFont.Location = new System.Drawing.Point(0, 317);
-            this.buttonFont.Name = "buttonFont";
-            this.buttonFont.Size = new System.Drawing.Size(192, 38);
-            this.buttonFont.TabIndex = 11;
-            this.buttonFont.Text = "Шрифт";
-            this.buttonFont.UseVisualStyleBackColor = true;
-            this.buttonFont.Click += new System.EventHandler(this.buttonFont_Click);
             // 
             // buttonUndo
             // 
@@ -410,7 +395,6 @@
         private System.Windows.Forms.Button buttonUndo;
         private System.Windows.Forms.Button button;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button buttonFont;
         private System.Windows.Forms.FontDialog fontDialog1;
     }
 }
